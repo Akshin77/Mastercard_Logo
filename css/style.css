@@ -1,0 +1,56 @@
+html,body{
+    margin: 0 auto;
+    padding: 0;
+    place-items: center;
+    display: grid;
+    flex-direction: column;
+}
+
+
+.main{
+    width: 400px;
+    height: 200px;
+    margin: 10px;
+    float: left;
+    /* background: lightblue; */
+    position: relative;
+    top: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main::before{
+    content: '';
+    position: absolute;
+    top: 40px;
+    bottom: 0;
+    left: 115px;
+    right: 0;
+    display: inline-block;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(#ff9900 50%, #cc0000 50%);
+    box-shadow: 70px 0 0 0 #ff9900, 70px 0 0 0 #cc0000 inset;
+    background-size: 50px 8px;
+    
+}
+
+.MyText::after{
+    content: '\00ae';
+    padding-left: 5px;
+    font-size: 20px;
+}
+
+.MyText{
+    font-family: 'Droid Sans', Arial, Helvetica, sans-serif;
+    font-style: italic;
+    letter-spacing: -1px;
+    font-size: 32px;
+    font-weight: bold;
+    z-index: 1;
+    position: absolute;
+    top: 150px;
+}
+
